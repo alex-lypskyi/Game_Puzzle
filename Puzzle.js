@@ -50,7 +50,7 @@ button1.addEventListener('click', function () {
   buttonLoadStyle.hidden = true;
 
   button2.addEventListener('click', function () {
-    baseImg.style.opacity = 0.5;
+    baseImg.style.opacity = 0.15;
     setTimeout(() => baseImg.style.opacity = 0, 5000);
   });
   
