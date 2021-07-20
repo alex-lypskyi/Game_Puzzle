@@ -92,8 +92,13 @@
     background: linear-gradient(45deg, #1533dda4, #ca7e97, #e2d985);
     color: honeydew;
 }
-.button, .button:active, .button:focus {
-    outline: none;
+.button {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.button:hover {
+    color: ivory;
+    outline: 0;
+    box-shadow: 0 0 40px 40px #be11a2 inset;
 }
 .buttonHelp {
     position: absolute;
