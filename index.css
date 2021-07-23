@@ -65,7 +65,6 @@
     height: 100%;
 }
 .draggable {
-    background-image: url(https://picsum.photos/700/400);
     background-size: 700px 400px;
     transition: width 2s;
     width: 140px;
@@ -75,12 +74,12 @@
     width: 140px;
     height: 100px;
 }
-.buttonStart {
+.buttonStartDiv {
     position: absolute;
     left: 740px;
     top: 550px;
 }
-.button1 {
+.buttonStart {
     font-size: 14pt;
     width: 250px;
     height: 45px;
@@ -100,12 +99,12 @@
     outline: 0;
     box-shadow: 0 0 40px 40px #be11a2 inset;
 }
-.buttonHelp {
+.buttonHelpDiv {
     position: absolute;
     left: 610px;
     top: 670px;
 }
-.button2 {
+.buttonHelp {
     font-size: 14pt;
     width: 200px;
     height: 40px;
@@ -117,12 +116,12 @@
     background: linear-gradient(45deg, #1533dda4, #ca7e97, #e2d985);
     color: honeydew;
 }
-.buttonNextImg {
+.buttonNextImgDiv {
     position: absolute;
     left: 435px;
     top: 550px;
 }
-.button3 {
+.buttonNextImg {
     font-size: 14pt;
     width: 270px;
     height: 45px;
@@ -177,7 +176,7 @@
     letter-spacing: 2px;
     border-radius: 7px;
 }
-.buttonLoad {
+.buttonLoadDiv {
     position: absolute;
     left: 530px;
     top: 615px;
@@ -194,7 +193,7 @@
     color: honeydew;
     cursor: pointer;
 }
-.buttonLoad1[type="file"] {
+.buttonLoad[type="file"] {
     display: none;
 }
 .developer {

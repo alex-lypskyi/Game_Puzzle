@@ -1,9 +1,9 @@
-const buttonLoad = document.querySelector('.buttonLoad1');
+const buttonLoad = document.querySelector('.buttonLoad');
 const previewImageEl = document.querySelector('.miniImg--img');
 const images = Array.from(document.querySelectorAll('.draggable'));
-const button1 = document.querySelector('.button1');
-const button2 = document.querySelector('.button2');
-const button3 = document.querySelector('.button3');
+const buttonStart = document.querySelector('.buttonStart');
+const buttonHelp = document.querySelector('.buttonHelp');
+const buttonNextImg = document.querySelector('.buttonNextImg');
 const puzzle = document.querySelector('.puzzle');
 const baseImg = document.querySelector('.baseImage');
 const youWin = document.querySelector('.youWin');
@@ -12,6 +12,10 @@ const miniImg = document.querySelector('.miniImg');
 const hello = document.querySelector('.hello');
 const timer = document.querySelector('.timer');
 const buttonLoadStyle = document.querySelector('.buttonLoadStyle');
+
+for (let i=0; i < images.length; i++){
+    images[i].style.backgroundImage = 'url(https://picsum.photos/700/400)';
+};
 
 buttonLoad.addEventListener('change', () => {
   const file = buttonLoad.files[0];
@@ -32,24 +36,24 @@ buttonLoad.addEventListener('change', () => {
 
 timer.hidden = true;
 miniImg.hidden = true;
-button3.addEventListener('click', () => document.location.reload());
+buttonNextImg.addEventListener('click', () => document.location.reload());
 youWin.hidden = true;
-button2.hidden = true;
+buttonHelp.hidden = true;
 
-button1.addEventListener('click', function () {
+buttonStart.addEventListener('click', function () {
   StartStop();
   puzzle.style.top = '220px';
   puzzle.style.left = '345px';
   puzzle.style.border = '15px ridge rgb(250, 175, 13)';
   timer.hidden = false;
   hello.hidden = true;
-  button1.hidden = true;
-  button2.hidden = false;
-  button3.hidden = true;
+  buttonStart.hidden = true;
+  buttonHelp.hidden = false;
+  buttonNextImg.hidden = true;
   miniImg.hidden = false;
   buttonLoadStyle.hidden = true;
 
-  button2.addEventListener('click', function () {
+  buttonHelp.addEventListener('click', function () {
     baseImg.style.opacity = 0.15;
     setTimeout(() => baseImg.style.opacity = 0, 5000);
   });
@@ -273,7 +277,7 @@ button1.addEventListener('click', function () {
       timer.style.left = 0;
       timer.style.right = 0;
       youWin.appendChild(timer);
-      button2.hidden = true;
+      buttonHelp.hidden = true;
       miniImg.hidden = true;
       puzzle.style.top = '110px';
       baseImg.style.opacity = 1;
@@ -286,8 +290,7 @@ button1.addEventListener('click', function () {
     };
   };
 });
-
-
+//--------------------Таймер-----------------------
 const base = 60;
 let clocktimer, dateObj, dh, dm, ds;
 let readout = '';
@@ -301,7 +304,6 @@ function ClearСlock() {
     readout = '00:00:00';
     document.timerForm.stopwatch.value=readout;
 }
-
 //функция для старта секундомера
 function StartTIME() {
     let cdateObj = new Date();
@@ -334,7 +336,6 @@ function StartTIME() {
     document.timerForm.stopwatch.value = readout;
     clocktimer = setTimeout("StartTIME()", 1);
 }
-
 //Функция запуска и остановки
 function StartStop() {
     if (init == 0){
