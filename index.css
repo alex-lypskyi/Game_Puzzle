@@ -1,6 +1,40 @@
+/* -------------------------------Анимация------------------------------- */
+.puzzle, .draggable, .youWin {
+    opacity: 0;
+    transition: 1s;
+    animation: show 2s 1;
+    animation-fill-mode: forwards;
+}
+.miniImg {
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+.buttonHelp {
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+@keyframes show{
+    0%{ opacity:0; }
+    100% { opacity:1; }
+}
+/* --------------------------------------------------------------------------- */
+#canvas {
+    position: absolute;
+    background-size: 100%;
+    opacity: 0;
+    transition: 1s;
+    animation: show 2s 1;
+    animation-fill-mode: forwards;
+}
 .game {
     position: relative;
-    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+    background: linear-gradient(20deg, #cfecd0, #a0cea7, #9ec0db);
 }
 .timer {
     position: absolute;
